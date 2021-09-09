@@ -42,6 +42,7 @@ const btnAccion = e => {
             }
         pintarCarrito()
     }
+    localStorage.setItem('carrito', JSON.stringify(carrito))
     e.stopPropagation()
 }
 
@@ -85,6 +86,7 @@ const pintarFooter = () => {
     btnVaciar.addEventListener('click', () => {
         carrito = {}
         pintarCarrito()
+        localStorage.setItem('carrito', JSON.stringify(carrito))
     })
 }
 
